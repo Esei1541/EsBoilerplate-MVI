@@ -23,7 +23,7 @@ dependencies {
 각 화면에서 사용할 상태, 이벤트, 효과를 정의하기 위한 인터페이스를 제공합니다. `UiState`, `UiEvent`, `UiEffect` 인터페이스를 상속하여 화면별 Contract를 구성합니다.
 
 * **`CommonState`**: 모든 화면에서 공통으로 가지는 상태(로딩 여부 `isLoading`, 다이얼로그 설정 `dialogConfig`)를 내장합니다.
-* **`CommonEffect`**: ViewModel에서 호출할 수 있는 공통 사이드 이펙트(`Toast`, `Maps`, `PopUpTo`, `Finish` 등)가 사전 정의되어 있습니다.
+* **`CommonEffect`**: ViewModel에서 호출할 수 있는 공통 사이드 이펙트(`Toast`, `StartActivity`, `PopUpTo`, `Finish` 등)가 사전 정의되어 있습니다.
 
 ```kotlin
 // 사용 예시
@@ -57,7 +57,7 @@ Contract Class에서 정의한 사항을 바탕으로 비즈니스 로직을 처
     * `setEvent(event)`: View에서 이벤트를 ViewModel로 전달할 때 호출합니다.
 * **공통 편의 함수**
     * 로딩 및 다이얼로그 제어: `setLoadingState(Boolean)`, `showDialog(DialogConfig)`, `hideDialog()`
-    * 공통 이펙트 발생: `toast()`, `Maps()`, `backStack()`, `finish()` 등
+    * 공통 이펙트 발생: `toast()`, `backStack()`, `finish()` 등
 
 ```kotlin
 // 사용 예시
